@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transporte e Mudanças Silva</title>
+    <style>
+        /* Estilos CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 60px; /* Espaço suficiente para o footer */
+        }
+        .navbar {
+            background-color: #006c54;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: x-large;
+            font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+        }
+        .logo img {
+            height: 40px; /* Ajuste conforme necessário */
+            margin-right: 10px;
+        }
+        .whatsapp-btn {
+            background-color: white;
+            color: #006c54;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+            margin-right: 3%;
+            text-decoration: none;
+        }
+        .slides {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            height: auto; /* Ajuste conforme necessário */
+            margin-top: 60px; /* Espaço para a navbar fixa */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slides img {
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+        .slides img.active {
+            display: block;
+        }
+        .contact-info {
+            background-color: #0E9076;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .cookie-consent-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+            display: none; /* Escondido por padrão */
+            z-index: 2000;
+        }
+        .cookie-content p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .cookie-buttons {
+            margin-top: 10px;
+        }
+        .cookie-buttons button {
+            margin: 0 5px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            background-color: #006c54;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .cookie-buttons button:hover {
+            opacity: 0.9;
+        }
+        .footer {
+            background-color: #077E65;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: small;
+        }
+        .footer img {
+            height: 30px; /* Ajuste conforme necessário */
+            width: 30px; /* Ajuste conforme necessário */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <span>Fretes e Mudanças Silva</span>
+        </div>
+        <a class="whatsapp-btn" href="https://wa.me/41996788865" class="btn btn-one" target="_blank">Faça um Orçamento</a>
+    </div>
+
+    <!-- Slides -->
+    <div class="slides">
+        <img src="slide1.jpg" alt="Slide 1" class="active">
+        <img src="slide2.jpg" alt="Slide 2">
+        <img src="slide3.jpg" alt="Slide 3">
+        <img src="slide4.jpg" alt="Slide 4">
+    </div>
+
+    <!-- Informações de Contato, Área de atendimento, Valores -->
+    <div class="contact-info">
+        <h2>Bem-vindo à Fretes e Mudanças Silva</h2>
+        <p>Na Fretes e Mudanças Silva, oferecemos serviços de fretes e mudanças com eficiência e segurança. <br>
+        Nossa equipe qualificada garante um transporte rápido e cuidadoso para cargas urbanas e intermunicipais, <br>
+        além de mudanças residenciais e comerciais.<br>
+        <br>
+        Escolha a Fretes e Mudanças Silva pela nossa pontualidade, profissionalismo e atendimento personalizado.<br>
+        Entre em contato e obtenha um orçamento sem compromisso para sua próxima mudança ou transporte de carga.</p>
+        <h2>Área de Atendimento</h2>
+        <p>Curitiba e região metropolitana. <br>
+            Consulte a viabilidade para outros locais.</p>
+        <h2>Valores</h2>
+        <p>Nossos preços são personalizados de acordo com a distância <br>
+             e a quantidade de material a ser transportado.<br>
+            Entre em contato conosco para uma cotação detalhada.</p>
+        <h2>Contato</h2>
+        <p>Telefone e WhatsApp: (41)1234-5678</p>
+    </div>
+    <div id="cookieConsentContainer" class="cookie-consent-container">
+        <div class="cookie-content">
+            <p>Este site usa cookies para garantir que você obtenha a melhor experiência em nosso site. <a href="#">Saiba mais</a></p>
+        </div>
+        <div class="cookie-buttons">
+            <button onclick="acceptCookies()">Aceitar</button>
+            <button onclick="declineCookies()">Recusar</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
+        <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slides img');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        window.onload = function() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookieConsentContainer').style.display = 'block';
+            }
+        };
+
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookieConsentContainer').style.display = 'none';
+        }
+
+        function declineCookies() {
+            document.getElementById('cookieConsentContainer').style.display = 'none';
+            // Aqui você pode adicionar lógica para desativar funcionalidades que dependem de cookies
+        }
+
+        setInterval(nextSlide, 3000); // Muda de slide a cada 3 segundos
+    </script>
+</body>
+</html>
